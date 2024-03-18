@@ -9,7 +9,7 @@ from deepchem.utils.typing import OneOrMany
 
 RNN_DICT = {"GRU": nn.GRU, "LSTM": nn.LSTM}
 
-class Smiles2Vec(nn.Module):
+class Smiles2VecModel(nn.Module):
     def __init__(self,
                  char_to_idx: Dict[str, int],
                  n_tasks: int = 10,
@@ -26,7 +26,7 @@ class Smiles2Vec(nn.Module):
                  mode: str = "regression",
                  **kwargs):
         
-        super(Smiles2Vec, self).__init__()
+        super(Smiles2VecModel, self).__init__()
 
         self.char_to_idx = char_to_idx
         self.n_classes = n_classes
